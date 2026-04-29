@@ -64,19 +64,25 @@ const allProjects = [
     result: 'Harmonious family living with lasting elegance.',
   },
 ];
-
+ 
 type Props = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string }>;    
 };
 
+export function generateStaticParams() {
+  return allProjects.map((project) => ({
+    id: project.id.toString(),
+  }));
+}
+
 export default async function ProjectDetailPage({ params }: Props) {
-  const { id } = await params;                    // ← Fixed: await the Promise
+  const { id } = await params;        // ← Await the promise
   const projectId = parseInt(id);
 
   const project = allProjects.find((p) => p.id === projectId);
 
   if (!project) {
-    notFound();                                   // Shows Next.js 404 page
+    notFound();
   }
 
   return (
@@ -94,7 +100,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       {/* Hero Image */}
       <div className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
         <Image
-          src={project.image}           // Now safe (project is guaranteed to exist)
+          src={project.image}            
           alt={project.title}
           fill
           className="object-cover"

@@ -4,8 +4,9 @@ export interface LogoProps {
   style:string;
 }
  
+ 
+ 
 export interface CategoryPageParams {
-  params: Promise<{
-    category: string;
-  }>;
+  params: Promise<{ category: string }>;
 }
+ 

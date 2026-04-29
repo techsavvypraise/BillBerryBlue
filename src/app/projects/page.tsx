@@ -1,14 +1,12 @@
-import ProjectsPage from "./project-date"; 
+import ProjectsClient from "./projectClient";
+ 
 
 export const metadata = {
-  title: 'Projects & Portfolio | Billberry Blue',
-  description: 'Explore our portfolio of premium residential and commercial interior design and furniture projects – functional, timeless spaces built to increase value.',
+  title: 'Projects | Billberry Blue',
+  description:
+    'Explore our premium residential and commercial interior design and furniture projects.',
 };
 
-export default function Projects() {
-  return (
-    <>
-      <ProjectsPage /> 
-    </>
-  );
+export default function ProjectsPage() {
+  return <ProjectsClient />
 }

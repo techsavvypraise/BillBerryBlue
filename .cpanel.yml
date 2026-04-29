@@ -1,0 +1,11 @@
+ deployment:
+  tasks:
+    - export DEPLOYPATH=/home/theodora/public_html/
+
+    - /usr/bin/npm install
+
+    - /usr/bin/npm run build 
+
+    - /bin/rm -rf $DEPLOYPATH/*
+
+    - /bin/cp -R out/* $DEPLOYPATH

@@ -1,5 +1,18 @@
-import type { NextConfig } from "next";
+const nextConfig = {
+  
+  output: 'export',
+ 
+  images: {
+    unoptimized: true,
+  },
 
-const nextConfig: NextConfig = {};
+  // Optional but Recommended Settings
+  trailingSlash: true,           // Good for static hosting
+  skipTrailingSlashRedirect: true,
 
-export default nextConfig;
+  // Improve build performance and debugging
+  reactStrictMode: true,
+ 
+};
+
+module.exports = nextConfig;

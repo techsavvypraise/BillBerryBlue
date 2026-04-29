@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CategoryPageParams } from '@/types/interfaces';
 
-// Static data for each collection (you can move this to a separate file later)
+// Static data for each collection
 const collectionData = {
   'living-rooms': {
     title: 'Living Rooms',
@@ -59,11 +59,15 @@ const collectionData = {
       '/assets/images/bill9.jpg',
     ],
   },
-  // Add more categories here as needed
+   
 };
-
-// export default async function CollectionPage({ params }: { params: Promise<{ category: string }> }) {
-//   const { category } = await params;
+ 
+export function generateStaticParams() {
+  return Object.keys(collectionData).map((category) => ({
+    category,
+  }));
+}
+ 
 export default async function CategoryPage({ params }: CategoryPageParams) {
   const { category } = await params;
 

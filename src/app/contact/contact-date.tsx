@@ -37,11 +37,11 @@ export default function ContactPage() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-5xl md:pt-4 pt-16 md:pb-4 pb-8 px-6 sm:px-10 text-center text-white">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-8 leading-tight">
-            Let's Create Something Extraordinary
+            Let&apos;s Create Something Extraordinary
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto mb-10 md:mb-14 leading-relaxed">
-            Begin your design journey with Bilberry Blue. Let’s create a space that reflects your vision with elegance and precision.
+            Begin your design journey with Bilberry Blue. Let&apos;s create a space that reflects your vision with elegance and precision.
           </p>
 
           {/* Buttons – better spacing & touch targets on mobile */}
@@ -92,7 +92,7 @@ export default function ContactPage() {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-secondary mb-8">
-                  We’d love to hear from you. Whether you’re planning a full design project or need professional guidance, Bilberry Blue is here to help.
+                  We&apos;d love to hear from you. Whether you&apos;re planning a full design project or need professional guidance, Bilberry Blue is here to help.
                 </p>
               </div>
 
@@ -246,7 +246,7 @@ export default function ContactPage() {
 
                 {formStatus === 'success' && (
                   <p className="text-green-600 text-center mt-4 font-medium">
-                    Thank you! We'll get back to you within 24 hours.
+                    Thank you! We&apos;ll get back to you within 24 hours.
                   </p>
                 )}
 
@@ -260,15 +260,14 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Final Reassurance */}
+ 
       <section className="py-16 md:py-24 bg-primary text-white text-center">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-5xl font-bold mb-8">
             We Look Forward to Working with You
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-10">
-            Every project starts with a conversation. Let's discuss how we can bring your vision to life.
+            Every project starts with a conversation. Let&apos;s discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
