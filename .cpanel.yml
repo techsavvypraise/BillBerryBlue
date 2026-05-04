@@ -1,10 +1,10 @@
- deployment:
+deployment:
   tasks:
-    - export DEPLOYPATH=/home/theodora/public_html/
+    - export DEPLOYPATH=/home/theodora/billberryblue.com/
 
     - /usr/bin/npm install
 
-    - /usr/bin/npm run build 
+    - /usr/bin/npm run build
 
     - /bin/rm -rf $DEPLOYPATH/*
 
