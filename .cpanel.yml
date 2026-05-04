@@ -1,11 +1,9 @@
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/theodora/billberryblue.com/
-
+    - export DEPLOYPATH=/home/theodora/billberryblue-live/
     - /usr/bin/npm install
-
     - /usr/bin/npm run build
-
+    - /bin/mkdir -p $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/*
-
     - /bin/cp -R out/* $DEPLOYPATH
